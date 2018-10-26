@@ -18,9 +18,9 @@ class App extends Component {
     console.log('Was clicked!');
     this.setState({
       persons: [
-        { name: 'newName', age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }   
+        { id: 0, name: 'newName', age: 28 },
+        { id: 1, name: 'Manu', age: 29 },
+        { id: 2, name: 'Stephanie', age: 27 }   
       ]
     })
   }
@@ -65,7 +65,8 @@ class App extends Component {
             return <Person 
             click={this.deletePersonHandler.bind(this, index)}
             name={person.name}
-            age={person.age} />
+            age={person.age} 
+            key={person.id}/>
           })}
       </div>: null
       
