@@ -75,13 +75,13 @@ class App extends Component {
       persons = (
         <div>
             <Persons 
-            persons={this.state.persons}
-            clicked={this.deletePersonHandler} 
-            changed={this.nameChangedHandler}/> 
+              persons={this.state.persons}
+              clicked={this.deletePersonHandler} 
+              changed={this.nameChangedHandler}/> 
 
 
          </div> 
-      )
+      );
       // the following code is old jsx for persons variable above
                   /* {this.state.persons.map((person, index) => {
               
@@ -103,22 +103,10 @@ class App extends Component {
       };
     }
 
-    const assignedClasses = []
-    if (this.state.persons.length <= 2) {
-      assignedClasses.push(classes.red); 
-    }
-    if (this.state.persons.length <= 1) {
-      assignedClasses.push(classes.bold);
-    }
-
     return (
       
         <div className={classes.App}>
-          <h1>Hi, I'm a React App.</h1>
-          <p className={assignedClasses.join(' ')}>This is really working!</p>
-          <button 
-            style={style}
-            onClick={this.togglePersonsHandler}>Toggle Persons</button>
+
           {persons}
           </div>
       
