@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Persons from '../components/Persons/Persons';
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 import classes from './App.css';
 
@@ -123,8 +123,8 @@ class App extends Component {
           </div>
       
     );
-    // return React.createElement('div', {className: 'App'}, 'h1', "I'm a React App!")
+   
   }
 }
-
+ // return React.createElement('div', {className: 'App'}, 'h1', "I'm a React App!")
 export default App;
