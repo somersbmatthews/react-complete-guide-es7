@@ -73,19 +73,26 @@ class App extends Component {
     
     if (this.state.showPersons){
       persons = (
-        <div>  
-          {this.state.persons.map((person, index) => {
-             
-          <Person 
-              click={() => this.deletePersonHandler(index)}
-              name={person.name}
-              age={person.age} 
-              key={person.id}
-              changed={(event) => this.nameChangedHandler(event, person.id)}/>
-              
-          })}
+        <div>
+            <Persons 
+            persons={this.state.persons}
+            clicked={this.deletePersonHandler} 
+            changed={this.nameChangedHandler}/> 
+
+
          </div> 
       )
+      // the following code is old jsx for persons variable above
+                  /* {this.state.persons.map((person, index) => {
+              
+              return <Person 
+                  click={() => this.deletePersonHandler(index)}
+                  name={person.name}
+                  age={person.age} 
+                  key={person.id}
+                  changed={(event) => this.nameChangedHandler(event, person.id)}/>
+                  
+            })} */
 
       btnClass = classes.Red;
 
