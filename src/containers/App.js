@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit.js'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 import classes from './App.css';
@@ -69,7 +70,7 @@ class App extends Component {
     };
 
     let persons = null;
-    let btnClass = '';
+
     
     if (this.state.showPersons){
       persons = (
@@ -94,7 +95,7 @@ class App extends Component {
                   
             })} */
 
-      btnClass = classes.Red;
+
 
       style.backgroundColor = 'red';
       style[':hover'] = {
@@ -106,7 +107,7 @@ class App extends Component {
     return (
       
         <div className={classes.App}>
-
+          <Cockpit showPersons={this.state.showPersons}/>
           {persons}
           </div>
       
