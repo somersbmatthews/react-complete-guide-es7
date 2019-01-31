@@ -9,7 +9,19 @@ import classes from './App.css';
 
 
 class App extends Component {
-  
+  constructor(props) {
+    super(props);
+    console.log('[App.js] Inside Constructor', props)
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount()')
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount()')
+  }
+
   state = {
     persons: [
       { name: 'Max', age: 28 },
