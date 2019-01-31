@@ -4,9 +4,14 @@ import Person from './Person/Person';
 
 
 
-class Person extends Component {
+class Persons extends Component {
     render () {
-
+        return <Person
+            click={() => this.props.clicked(index)}
+            name={person.name}
+            age={person.age} 
+            key={person.id}
+            changed={(event) => this.props.Changed(event, person.id)}/> 
     
     }
 } = (props) => props.persons.map((person, index ) => {
@@ -15,7 +20,7 @@ class Person extends Component {
             name={person.name}
             age={person.age} 
             key={person.id}
-            changed={(event) => this.Changed(event, person.id)}/>  
+            changed={(event) => props.Changed(event, person.id)}/>  
     });
 
-export default persons;
+export default Persons;
