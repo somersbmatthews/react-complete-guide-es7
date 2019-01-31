@@ -4,7 +4,12 @@ import Person from './Person/Person';
 
 
 
-Class Person = (props) => props.persons.map((person, index ) => {
+class Person extends Component {
+    render () {
+
+    
+    }
+} = (props) => props.persons.map((person, index ) => {
         return <Person
             click={() => props.clicked(index)}
             name={person.name}
