@@ -6,34 +6,34 @@ import classes from './Person.css';
 class Person extends Component {
     constructor(props) {
         super(props);
-        console.log('[Persons.js] Inside Constructor', props)
+        console.log('[Person.js] Inside Constructor', props)
     }
 
     componentWillMount() {
-        console.log('[Persons.js] Inside componentWillMount()')
+        console.log('[Person.js] Inside componentWillMount()')
     }
 
     componentDidMount() {
-        console.log('[Persons.js] Inside componentDidMount()')
+        console.log('[Person.js] Inside componentDidMount()')
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('[UPDATE Persons.js] Inside componentWillReceiveProps()', nextProps)
+        console.log('[UPDATE Person.js] Inside componentWillReceiveProps()', nextProps)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('[UPDATE Persons.js] Inside shouldComponentUpdate()', nextProps, nextState)
+        console.log('[UPDATE Person.js] Inside shouldComponentUpdate()', nextProps, nextState)
         return nextProps.persons !== this.props.persons ||
             nextProps.changed !== this.props.changed ||
             nextProps.clicked !== this.props.clicked
     }
 
     componentWillUpdate(nextProps) {
-        console.log('[UPDATE Persons.js Inside componentWillUpdate()', nextProps)
+        console.log('[UPDATE Person.js Inside componentWillUpdate()', nextProps)
     }
 
     componentDidUpdate() {
-        console.log('[UPDATE Persons.js Inside componentDidUpdate()')
+        console.log('[UPDATE Person.js Inside componentDidUpdate()')
     }
 
 
