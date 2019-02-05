@@ -5,7 +5,7 @@ import WithClass from '../../../hoc/WithClass'
 
 
 
-class Persons extends Component {
+class Persons extends PureComponent {
     constructor(props) {
         super(props);
         console.log('[Persons.js] Inside Constructor', props)
