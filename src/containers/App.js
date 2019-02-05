@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit.js'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
-
+import WithClass from './hoc/WithClass';
+import Aux from './hoc/aux'
 import classes from './App.css';
 
 
@@ -20,6 +21,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log('[App.js] Inside componentDidMount()')
+    this.inputElement.focus()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -136,14 +138,14 @@ class App extends Component {
 
     return (
       
-        <div className={classes.App}>
+        <Aux>
           <button onClick={() => {this.setState({showPersons; true})}}>Show Persons</button>
           <Cockpit appTitle={this.props.title}
                    showPersons={this.state.showPersons}
                    persons={this.state.persons}
                    clicked={this.togglePersonsHandler} />
           {persons}
-          </div>
+        </Aux>
       
     );
    

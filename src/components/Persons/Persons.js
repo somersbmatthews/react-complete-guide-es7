@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import Person from './Person/Person';
+import WithClass from '../../../hoc/WithClass'
 
 
 
@@ -20,7 +21,7 @@ class Persons extends Component {
     componentWillReceiveProps(nextProps) {
         console.log('[UPDATE Persons.js] Inside componentWillReceiveProps()', nextProps)
     }
-    // below code used with pureComponent
+    // below code used with PureComponent
 
     // shouldComponentUpdate(nextProps, nextState) {
     //     console.log('[UPDATE Persons.js] Inside shouldComponentUpdate()', nextProps, nextState)
